@@ -70,16 +70,16 @@ You can pick any of those to serialize a given class (for example,
 with `Serializer::MessagePack`).
 
 ```
-class MyClass does Serializeable[Serializer::MessagePack]
+class MyClass does Serializable[Serializer::MessagePack]
 {
     has $.name;
     has $.value;
 }
 ```
 
-Now that objects of that class can be passed to other classes that
-just need the class to be able to serialize/deserialize itself but
-don't care how it happens.
+Now objects of that class can be passed to other classes that just
+need the class to be able to serialize/deserialize itself (`does`
+`Serializable`) but don't care how it happens.
 
 As the other `*::Class` modules, you can add some traits to customize:
 
