@@ -6,7 +6,7 @@ interface to using various serialization modules to serialize
 Perl 6 classes.
 
 * [JSON::Marshal](https://github.com/jonathanstowe/JSON-Marshal)
-* [JSON::Unmarshall](https://github.com/tadzik/JSON-Unmarshal)
+* [JSON::Unmarshal](https://github.com/tadzik/JSON-Unmarshal)
 * [JSON::Class](https://github.com/jonathanstowe/JSON-Class)
 * [JSON::Fast](https://github.com/timo/json_fast)
 * [YAMLish](https://github.com/Leont/yamlish)
