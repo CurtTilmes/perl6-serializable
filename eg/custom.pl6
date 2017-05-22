@@ -1,5 +1,8 @@
 use v6;
 
+# A toy custom serialization for demonstration purposes, not much
+# better than MessagePack in reality
+
 use Serializable;
 
 sub pack-str(Str $str --> Blob)  # Assume less than 256 bytes ;-)

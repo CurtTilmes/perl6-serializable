@@ -7,10 +7,10 @@ use Serializer::MessagePack;
 use Serializer::BSON;
 use Serializer::LibYAML;
 
-#constant serializer = Serializer::JSON;
+constant serializer = Serializer::JSON;
 #constant serializer = Serializer::YAMLish;
 #constant serializer = Serializer::LibYAML;
-constant serializer = Serializer::MessagePack;
+#constant serializer = Serializer::MessagePack;
 #constant serializer = Serializer::BSON;
 
 class MyClass does Serializable[serializer]

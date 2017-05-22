@@ -1,0 +1,44 @@
+{
+    "name" : "Serializable",
+
+    "description" : "Perl6 Object Serialization Roles",
+
+    "auth" : "github:CurtTilmes",
+
+    "version" : "0.1",
+
+    "source-url" : "https://github.com/CurtTilmes/perl6-serializable.git",
+
+    "perl" : "6.c",
+
+    "tags" : [ "serialization" ],
+
+    "provides" : {
+        "Serializable"              : "lib/Serializable.pm6",
+        "Serializer"                : "lib/Serializable.pm6",
+        "Serializer::Hash"          : "lib/Serializer/Hash.pm6",
+        "Serializer::JSON"          : "lib/Serializer/JSON.pm6",
+        "Serializer::MessagePack"   : "lib/Serializer/MessagePack.pm6",
+        "Serializer::YAMLish"       : "lib/Serializer/YAMLish.pm6",
+        "Serializer::LibYAML"       : "lib/Serializer/LibYAML.pm6",
+        "Serializer::BSON"          : "lib/Serializer/BSON.pm6"
+    },
+
+    "depends" : [ "Data::MessagePack",
+                  "JSON::Fast",
+                  "YAMLish",
+                  "LibYAML",
+                  "BSON::Document" ],
+
+    "test-depends" : [ "Test", "Test::META", "Test::When" ],
+
+    "license" : "Artistic-2.0",
+
+    "authors" : [ "Curt Tilmes <ctilmes@cpan.org>",
+                  "Jonathan Stowe <jns+git@gellyfish.co.uk>" ],
+
+    "support" : {
+      "source" : "https://github.com/CurtTilmes/perl6-serializable.git",
+      "bugtracker" : "https://github.com/yaml/yaml-libyaml-perl6/issues"
+    }
+}

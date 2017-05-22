@@ -121,3 +121,7 @@ class MyClass does Serializable[MyClass::Serializer]
     has Version $.version;
 }
 ```
+
+# Acknowledgements
+
+This builds heavily on the work of Jonathan Stowe.

@@ -19,10 +19,15 @@ role Serializer::Hash does Serializer
             if $attr.has_accessor
             {
                 my $name = $attr.name.substr(2);
+
                 my $value = $attr.get_value($obj);
-                %attrs{$name} = $attr ~~ CustomMarshaller
-                    ?? $attr.marshal($value, $obj)
-                    !! $value;
+
+                %attrs{$name} = do given $attr
+                {
+                    when CustomMarshaller      { $attr.marshal($value, $obj) }
+                    when .type ~~ Serializable { $value.serialize }
+                    default                    { $value }
+                }
             }
 
         }
@@ -41,10 +46,20 @@ role Serializer::Hash does Serializer
                 !(%local-attrs{$attr.name} === $attr.package);
 
             my $data-name = $attr.name.substr(2);
-            if %attrs{$data-name}:exists && $attr ~~ CustomUnmarshaller
+
+            next unless %attrs{$data-name}:exists;
+
+            %attrs{$data-name} = do given $attr
             {
-                %attrs{$data-name} = $attr.unmarshal(%attrs{$data-name},
-                                                     $attr.type);
+                when CustomUnmarshaller    {
+                    $attr.unmarshal(%attrs{$data-name}, $attr.type)
+                }
+                when .type ~~ Serializable {
+                    $attr.type.deserialize(%attrs{$data-name}, $attr.type)
+                }
+                default {
+                    %attrs{$data-name}
+                }
             }
         }
 
