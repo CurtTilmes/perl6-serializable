@@ -1,5 +1,3 @@
-use v6;
-
 use LibYAML;
 use Serializer::Hash;
 

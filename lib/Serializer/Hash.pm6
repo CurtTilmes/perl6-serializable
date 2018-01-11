@@ -1,5 +1,3 @@
-use v6;
-
 use Serializable;
 
 role Serializer::Hash does Serializer

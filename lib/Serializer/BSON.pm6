@@ -1,5 +1,3 @@
-use v6;
-
 # This is a poor way to use BSON.. just a proof of concept for now..
 
 use BSON::Document;

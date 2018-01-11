@@ -1,5 +1,3 @@
-use v6;
-
 use JSON::Fast;
 use Serializer::Hash;
 

@@ -1,5 +1,3 @@
-use v6;
-
 use Data::MessagePack;
 use Serializer::Hash;
 

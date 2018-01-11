@@ -1,5 +1,3 @@
-use v6;
-
 use Serializable;
 use Serializer::YAMLish;
 use Serializer::JSON;

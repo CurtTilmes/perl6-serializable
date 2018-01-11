@@ -1,5 +1,3 @@
-use v6;
-
 role CustomMarshaller
 {
     method marshal($value, Mu:D $object) { ... }
