@@ -21,7 +21,8 @@
         "Serializer::MessagePack"   : "lib/Serializer/MessagePack.pm6",
         "Serializer::YAMLish"       : "lib/Serializer/YAMLish.pm6",
         "Serializer::LibYAML"       : "lib/Serializer/LibYAML.pm6",
-        "Serializer::BSON"          : "lib/Serializer/BSON.pm6"
+        "Serializer::BSON"          : "lib/Serializer/BSON.pm6",
+        "Serializer::MsgPack"       : "lib/Serializer/MsgPack.pm6"
     },
 
     "depends" : [ "Data::MessagePack",
@@ -39,6 +40,6 @@
 
     "support" : {
       "source" : "https://github.com/CurtTilmes/perl6-serializable.git",
-      "bugtracker" : "https://github.com/yaml/yaml-libyaml-perl6/issues"
+      "bugtracker" : "https://github.com/CurtTilmes/perl6-serializable/issues"
     }
 }

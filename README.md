@@ -14,6 +14,7 @@ Perl 6 classes.
 * [Data::MessagePack](https://github.com/pierre-vigier/Perl6-Data-MessagePack)
 * [MessagePack::Class](https://github.com/jonathanstowe/MessagePack-Class)
 * [BSON](https://github.com/MARTIMM/BSON)
+* [MsgPack](https://github.com/azawawi/perl6-msgpack/)
 
 The goal is to define a generic interface role that can be built on by
 everything else.
@@ -65,6 +66,7 @@ then subclass that (subrole?) into other `Serializer`s:
 * `Serializer::YAMLish`
 * `Serializer::LibYAML`
 * `Serializer::BSON`
+* `Serializer::MsgPack`
 
 You can pick any of those to serialize a given class (for example,
 with `Serializer::MessagePack`).

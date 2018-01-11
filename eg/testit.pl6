@@ -4,8 +4,10 @@ use Serializer::JSON;
 use Serializer::MessagePack;
 use Serializer::BSON;
 use Serializer::LibYAML;
+use Serializer::MsgPack;
 
-constant serializer = Serializer::JSON;
+constant serializer = Serializer::MsgPack;
+#constant serializer = Serializer::JSON;
 #constant serializer = Serializer::YAMLish;
 #constant serializer = Serializer::LibYAML;
 #constant serializer = Serializer::MessagePack;
