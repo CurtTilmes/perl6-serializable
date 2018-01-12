@@ -29,7 +29,9 @@
                   "JSON::Fast",
                   "YAMLish",
                   "LibYAML",
-                  "BSON::Document" ],
+                  "BSON::Document",
+                  "MsgPack"
+                ],
 
     "test-depends" : [ "Test", "Test::META", "Test::When" ],
 
